@@ -18,12 +18,12 @@
                      <children>
                         <AnchorPane prefHeight="400.0" prefWidth="174.0">
                            <children>
-                              <Button alignment="CENTER" layoutX="20.0" layoutY="120.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="135.0" style="-fx-background-color: transpend;" text="New Game" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                              <Button fx:id="newGameBtn" alignment="CENTER" layoutX="20.0" layoutY="120.0" mnemonicParsing="false" onAction="#HandleNewGame" prefHeight="30.0" prefWidth="135.0" style="-fx-background-color: transpend;" text="New Game" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                                  <font>
                                     <Font name="Silom" size="13.0" />
                                  </font>
                               </Button>
-                              <Button alignment="CENTER" layoutX="20.0" layoutY="160.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="135.0" style="-fx-background-color: transpend;" text="Load Game" textFill="#fcfafa" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                              <Button fx:id="loadGameBtn" alignment="CENTER" layoutX="20.0" layoutY="160.0" mnemonicParsing="false" onAction="#HandleLoadGame" prefHeight="30.0" prefWidth="135.0" style="-fx-background-color: transpend;" text="Load Game" textFill="#fcfafa" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                                  <font>
                                     <Font name="Silom" size="13.0" />
                                  </font>
@@ -48,7 +48,7 @@
                <children>
                   <ImageView fitHeight="420.0" fitWidth="432.0" layoutX="-1.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../images/mainPepe.gif" />
+                        <Image url="@/images/mainPepe.gif" />
                      </image>
                   </ImageView>
                </children></AnchorPane>

@@ -5,19 +5,22 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import world.ucode.scenes.MainMenu;
 
 public class Main extends Application {
-
-    @Override
-    public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("/FXML/MainMenu.fxml"));
-        primaryStage.setTitle("Tamagotchi---");
-        primaryStage.setScene(new Scene(root, 300, 275));
-        primaryStage.show();
-    }
-
-
     public static void main(String[] args) {
         launch(args);
+    }
+    @Override
+    public void start(Stage primaryStage) {
+//        Parent root = FXMLLoader.load(getClass().getResource("/FXML/MainMenu.fxml"));
+        try {
+            primaryStage.setTitle("Tamagotchi---");
+            MainMenu menu = new MainMenu(primaryStage);
+            primaryStage.setResizable(false);
+            primaryStage.show();
+        } catch (Exception e) {
+            System.err.println("Exception");
+        }
     }
 }
