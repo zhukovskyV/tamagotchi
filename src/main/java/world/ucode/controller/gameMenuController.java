@@ -9,7 +9,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class gameMenuController extends Controller {
-    public gameMenuController(Stage primaryStage){
+    public gameMenuController(Stage primaryStage) {
         super(primaryStage);
     }
 
@@ -23,6 +23,7 @@ public class gameMenuController extends Controller {
     private void HandleLoadGame() {
         System.out.println("This is Load Game");
     }
+
     @FXML
     Button newGameBtn;
 

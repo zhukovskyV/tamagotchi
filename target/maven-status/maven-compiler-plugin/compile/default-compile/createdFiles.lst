@@ -3,4 +3,6 @@ world/ucode/scenes/GameScene.class
 world/ucode/scenes/NewGame.class
 world/ucode/controller/newGameController.class
 world/ucode/controller/Controller.class
+world/ucode/scenes/GamePlay.class
 world/ucode/controller/gameMenuController.class
+world/ucode/controller/gamePlayController.class

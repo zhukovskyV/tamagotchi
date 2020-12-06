@@ -1,5 +1,7 @@
 /Users/vzhukovsky/Desktop/tamagotchi/src/main/java/world/ucode/scenes/MainMenu.java
+/Users/vzhukovsky/Desktop/tamagotchi/src/main/java/world/ucode/scenes/GamePlay.java
 /Users/vzhukovsky/Desktop/tamagotchi/src/main/java/world/ucode/scenes/GameScene.java
+/Users/vzhukovsky/Desktop/tamagotchi/src/main/java/world/ucode/controller/gamePlayController.java
 /Users/vzhukovsky/Desktop/tamagotchi/src/main/java/world/ucode/controller/gameMenuController.java
 /Users/vzhukovsky/Desktop/tamagotchi/src/main/java/world/ucode/controller/newGameController.java
 /Users/vzhukovsky/Desktop/tamagotchi/src/main/java/world/ucode/controller/Controller.java
