@@ -38,7 +38,7 @@
                   <Button id="giveFeed" layoutX="293.0" mnemonicParsing="false" onAction="#handleFeed" prefHeight="83.0" prefWidth="92.0" text="Feed" AnchorPane.bottomAnchor="30.0" AnchorPane.topAnchor="0.0" />
                   <Button id="giveWater" layoutX="385.0" mnemonicParsing="false" onAction="#handleWater" prefHeight="83.0" prefWidth="92.0" text="Give Water" AnchorPane.bottomAnchor="30.0" AnchorPane.topAnchor="0.0" />
                   <Button id="giveClean" layoutX="477.0" mnemonicParsing="false" onAction="#handleClean" prefHeight="83.0" prefWidth="92.0" text="Clean Up" AnchorPane.bottomAnchor="30.0" AnchorPane.topAnchor="0.0" />
-                  <Button layoutY="-1.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="85.0" text="Main Menu" />
+                  <Button layoutY="-1.0" mnemonicParsing="false" onAction="#backMainMenu" prefHeight="50.0" prefWidth="85.0" text="Main Menu" />
                </children>
             </AnchorPane>
          </bottom>

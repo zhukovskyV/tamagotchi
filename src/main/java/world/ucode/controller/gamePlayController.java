@@ -3,23 +3,25 @@ package world.ucode.controller;
 import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.stage.Stage;
 import world.ucode.peppes.Peppes;
 import world.ucode.peppes.PeppesInteraction;
+import world.ucode.scenes.MainMenu;
 
 import javax.swing.*;
 import javax.swing.text.html.ImageView;
 import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import world.ucode.controller.newGameController
 
 public class gamePlayController extends Controller {
     Peppes peppes;
     Timeline LifeCycle;
     @FXML
-    ImageView PeppeView;
-
+    ImageView PeppeView;;
     @FXML
     private ProgressBar healthBar;
     @FXML
@@ -37,11 +39,16 @@ public class gamePlayController extends Controller {
     }
 
     private void setProgress() {
-        healthBar.setProgress(peppes.getHealth()/peppes.getMaxHealth());
-        happiestBar.setProgress(peppes.getHappy()/ 10);
-        hungerBar.setProgress(peppes.getHunger()/ 10);
-        thirstBar.setProgress(peppes.getThirst()/10);
-        cleanlinessBar.setProgress(peppes.getCleanliness()/10);
+        healthBar.setProgress(peppes.getHealth() / peppes.getMaxHealth());
+        happiestBar.setProgress(peppes.getHappy() / 10);
+        hungerBar.setProgress(peppes.getHunger() / 10);
+        thirstBar.setProgress(peppes.getThirst() /10);
+        cleanlinessBar.setProgress(peppes.getCleanliness() / 10);
+    }
+
+    @FXML
+    void backMainMenu(ActionEvent event) {
+        MainMenu menu = new MainMenu(primaryStage);
     }
 
     @FXML
