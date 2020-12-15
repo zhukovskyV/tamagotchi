@@ -5,9 +5,10 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import world.ucode.peppes.PeppeType;
+import world.ucode.peppes.Peppes;
 import world.ucode.scenes.GamePlay;
 import world.ucode.scenes.MainMenu;
-import world.ucode.scenes.NewGame;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -24,6 +25,7 @@ public class newGameController extends Controller {
     TextField ClownPeppe;
 
     String name;
+    GamePlay gamePlay;
 
     @FXML
     private void HandleBadMan() {
@@ -31,7 +33,7 @@ public class newGameController extends Controller {
         name = NormalPeppe.getText();
        if (name.length() != 0) {
            System.out.println("Create Normal PEPPE " + name);
-           GamePlay scene = new GamePlay(primaryStage);
+           gamePlay = new GamePlay(primaryStage, new Peppes(PeppeType.BADMAN, name));
        }
     }
 
@@ -41,7 +43,7 @@ public class newGameController extends Controller {
         name = ClownPeppe.getText();
         if (name.length() != 0) {
             System.out.println("Create Clown PEPPE " + name);
-            GamePlay scene = new GamePlay(primaryStage);
+            gamePlay = new GamePlay(primaryStage, new Peppes(PeppeType.CLOWN, name));
         }
     }
 

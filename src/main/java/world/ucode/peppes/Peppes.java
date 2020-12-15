@@ -30,6 +30,10 @@ public class Peppes {
         }
     }};
 
+    public Peppes(PeppeType type, String name) {
+        this.type = type;
+        this.name = name;
+    }
 
     public void ActionHandler(PeppesInteraction interact, Peppes peppes) throws InvocationTargetException, IllegalAccessException {
         actions.get(interact).invoke(peppes);

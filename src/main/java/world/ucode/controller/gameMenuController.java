@@ -3,7 +3,7 @@ package world.ucode.controller;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
-import world.ucode.scenes.NewGame;
+import world.ucode.scenes.*;
 
 import java.net.URL;
 import java.util.ResourceBundle;
