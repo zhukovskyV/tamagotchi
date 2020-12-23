@@ -7,7 +7,8 @@ public enum PeppesInteraction {
     FEED("Eat"),
     GIVE_WATER("Drink"),
     GIVE_DRUGS("Drugs"),
-    CLEAN_UP("Shower");
+    CLEAN_UP("Shower"),
+    DEATH("Death");
 
     private final String name;
     PeppesInteraction(final String name) {

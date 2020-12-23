@@ -5,26 +5,27 @@ import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import world.ucode.peppes.PeppeAnimation;
 import world.ucode.peppes.Peppes;
 import world.ucode.peppes.PeppesInteraction;
+import world.ucode.scenes.GameOver;
 import world.ucode.scenes.MainMenu;
+import javafx.scene.image.ImageView;
 
-import javax.swing.*;
-import javax.swing.text.html.ImageView;
+
 import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.util.ResourceBundle;
-import world.ucode.controller.newGameController;
 
 public class gamePlayController extends Controller {
     Peppes peppes;
+    PeppeAnimation animation;
     Timeline LifeCycle;
     @FXML
-    ImageView PeppeView;;
+    private ImageView PeppeView;;
     @FXML
     private ProgressBar healthBar;
     @FXML
@@ -57,6 +58,7 @@ public class gamePlayController extends Controller {
     @FXML
     void hadlePlay() throws InvocationTargetException, IllegalAccessException {
         peppes.ActionHandler(PeppesInteraction.PLAY, peppes);
+        animation.HadleAnimation(PeppesInteraction.PLAY);
         System.out.println("<---you make your peppe more happy--->");
     }
 
@@ -94,12 +96,14 @@ public class gamePlayController extends Controller {
                     public void handle(ActionEvent event) {
                         if(peppes.LifeCycle() == -1) {
                             LifeCycle.stop();
+                            GameOver menu = new GameOver(primaryStage);
                         }
                     setProgress();
                 }
         }));
         LifeCycle.play();
     }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         startLifeCycle();

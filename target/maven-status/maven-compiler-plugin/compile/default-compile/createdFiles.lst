@@ -1,8 +1,10 @@
+world/ucode/controller/gameOverController.class
 world/ucode/peppes/PeppeAnimation.class
 world/ucode/scenes/NewGame.class
 world/ucode/peppes/Peppes.class
 world/ucode/scenes/GamePlay.class
 world/ucode/controller/gamePlayController.class
+world/ucode/scenes/GameOver.class
 world/ucode/controller/gamePlayController$1.class
 world/ucode/scenes/MainMenu.class
 world/ucode/peppes/PeppesInteraction.class
