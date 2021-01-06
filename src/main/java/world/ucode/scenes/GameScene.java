@@ -12,7 +12,7 @@ public abstract class GameScene {
     public Parent panel;
     GameScene(Stage primaryStage, String path, Object Controller) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/" + path));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML" + path));
             loader.setController(Controller);
             panel = loader.load();
             scene = new Scene(panel, 600,400);

@@ -7,17 +7,16 @@ import javafx.scene.image.ImageView;
 import javafx.util.Duration;
 
 public class PeppeAnimation {
-    PeppeType peppe;
+    PeppeType peppeType;
     private final ImageView AnimationView;
     private final Timeline timeline;
 
-    public PeppeAnimation(PeppeType peppe, ImageView AnimationView, ImageView PeppesView, ImageView animationView) {
-
+    public PeppeAnimation(PeppeType peppeType, ImageView animationView, ImageView peppeViev) {
         this.AnimationView = animationView;
-        this.peppe = peppe;
+        this.peppeType = peppeType;
         this.timeline = new Timeline(new KeyFrame(Duration.seconds(4), actionEvent -> AnimationView.setVisible(false)));
         AnimationView.setVisible(true);
-        PeppesView.setImage(new Image("/images/" + peppe.toString() + "/" + "defaultStatus.gif"));
+        peppeViev.setImage(new Image("/images/" + peppeType.toString() + "/" + "defaultStatus.gif"));
     }
 
     public void HadleAnimation(PeppesInteraction action) {
@@ -26,6 +25,6 @@ public class PeppeAnimation {
         timeline.play();
     }
     private Image GetImage(PeppesInteraction action) {
-        return new Image("/images/" + peppe.toString() + action.toString() + ".gif");
+        return new Image("/images/" + peppeType.toString() + "/" + action.toString() + ".gif");
     }
 }

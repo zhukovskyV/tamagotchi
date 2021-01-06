@@ -1,69 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="clownBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="405.0" prefWidth="609.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button layoutX="68.0" layoutY="50.0" mnemonicParsing="false" onAction="#HandleBadMan" prefHeight="150.0" prefWidth="149.0" style="-fx-background-color: none;">
-         <graphic>
-            <ImageView fitHeight="150.0" fitWidth="136.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@/images/defaultPeppe.gif" />
-               </image>
-            </ImageView>
-         </graphic>
+      <ChoiceBox fx:id="HandleChoiseBox" layoutX="225.0" layoutY="279.0" prefWidth="150.0" />
+      <ImageView fitHeight="181.0" fitWidth="246.0" layoutX="206.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/images/LoadGame.gif" />
+         </image>
+      </ImageView>
+      <Button layoutX="196.0" layoutY="333.0" mnemonicParsing="false" onMouseClicked="#HandleBack" text="Back">
+         <font>
+            <Font name="Silom" size="13.0" />
+         </font>
       </Button>
-      <Button layoutX="300.0" layoutY="196.0" mnemonicParsing="false" onAction="#handleClown" prefHeight="149.0" prefWidth="148.0" style="-fx-background-color: none;" textAlignment="CENTER">
-         <graphic>
-            <ImageView fitHeight="152.0" fitWidth="133.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@/images/PeppoClown.gif" />
-               </image>
-            </ImageView>
-         </graphic>
+      <Button layoutX="346.0" layoutY="333.0" mnemonicParsing="false" onMouseClicked="#HandleLoad" text="Load">
+         <font>
+            <Font name="Silom" size="13.0" />
+         </font>
       </Button>
-      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Text layoutX="225.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BIO: Peppe its peppe he wants your love!" wrappingWidth="150.99999010562897">
-         <font>
-            <Font name="Silom" size="17.0" />
-         </font>
-      </Text>
-      <Text layoutX="375.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BIO: Happiest version Peppe. He like jokes!" translateX="79.0" wrappingWidth="140.99999221623875">
-         <font>
-            <Font name="Silom" size="17.0" />
-         </font>
-      </Text>
-      <Text layoutX="172.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chose Your Peppe">
-         <font>
-            <Font name="Silom" size="29.0" />
-         </font>
-      </Text>
-      <TextField id="NormalPeppe" fx:id="NormalPeppe" layoutX="107.0" layoutY="212.0" text="Feels Bad Man">
-         <font>
-            <Font name="Silom" size="13.0" />
-         </font>
-      </TextField>
-      <TextField id="ClownPeppe" fx:id="ClownPeppe" layoutX="349.0" layoutY="363.0" text="Peppo Clown">
-         <font>
-            <Font name="Silom" size="13.0" />
-         </font>
-      </TextField>
-      <Label layoutX="54.0" layoutY="217.0" text="Name:">
-         <font>
-            <Font name="Silom" size="13.0" />
-         </font>
-      </Label>
-      <Label layoutX="294.0" layoutY="369.0" text="Name:">
-         <font>
-            <Font name="Silom" size="13.0" />
-         </font>
-      </Label>
    </children>
 </AnchorPane>

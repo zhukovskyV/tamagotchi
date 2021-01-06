@@ -2,10 +2,10 @@ package world.ucode.peppes;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.util.HashMap;
-import java.util.Map;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Peppes {
     private String name;
@@ -33,6 +33,22 @@ public class Peppes {
     public Peppes(PeppeType type, String name) {
         this.type = type;
         this.name = name;
+        System.out.println(type);
+    }
+
+    public Peppes(ResultSet Avatar) {
+        try {
+            type = toType(Avatar.getString("type"));
+            name = Avatar.getString("name");
+            health = Double.parseDouble(Avatar.getString("health"));
+            happy = Double.parseDouble(Avatar.getString("happiness"));
+            hunger = Double.parseDouble(Avatar.getString("hunger"));
+            thirst = Double.parseDouble(Avatar.getString("thirst"));
+            cleanliness = Double.parseDouble(Avatar.getString("cleanliness"));
+        }
+        catch(SQLException ignored) {
+            System.err.println("SQLException");
+        }
     }
 
     public void ActionHandler(PeppesInteraction interact, Peppes peppes) throws InvocationTargetException, IllegalAccessException {
@@ -72,13 +88,17 @@ public class Peppes {
         return null;
     }
 
+    public PeppeType GetType() {
+        return type;
+    }
+
     public int LifeCycle() {
         if (getHealth() > 0) {
-            setHappy(getHappy() - 0.05);
-            setHealth(getHealth() - 0.05);
-            setCleanliness(getCleanliness() - 0.05);
-            setHunger(getHunger() - 0.05);
-            setThirst(getThirst() - 0.05);
+            setHappy(getHappy() - 0.005);
+            setHealth(getHealth() - 0.005);
+            setCleanliness(getCleanliness() - 0.005);
+            setHunger(getHunger() - 0.005);
+            setThirst(getThirst() - 0.005);
             return 0;
         }
         return -1;
@@ -94,12 +114,12 @@ public class Peppes {
 
     private void feed() {
         setHunger(getHunger() + 1);
-        setHealth(getHealth() + 0.25);
+        setHealth(getHealth() + 1);
     }
 
     private void giveWater() {
         setThirst(getThirst() + 1);
-        setHealth(getHealth() + 0.25);
+        setHealth(getHealth() + 1);
     }
 
     private void giveDrugs() {

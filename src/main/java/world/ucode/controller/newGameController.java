@@ -1,14 +1,11 @@
 package world.ucode.controller;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import world.ucode.peppes.PeppeType;
 import world.ucode.peppes.Peppes;
 import world.ucode.scenes.GamePlay;
-import world.ucode.scenes.MainMenu;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -32,7 +29,6 @@ public class newGameController extends Controller {
         System.out.println("<-----------------Its Feels Bad Man-------------------->");
         name = NormalPeppe.getText();
        if (name.length() != 0) {
-           System.out.println("Create Normal PEPPE " + name);
            gamePlay = new GamePlay(primaryStage, new Peppes(PeppeType.BADMAN, name));
        }
     }

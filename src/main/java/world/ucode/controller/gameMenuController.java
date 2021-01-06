@@ -21,8 +21,14 @@ public class gameMenuController extends Controller {
 
     @FXML
     private void HandleLoadGame() {
+        LoadGame loadGame = new LoadGame(primaryStage);
         System.out.println("This is Load Game");
     }
+
+//    @FXML
+//    private void HandleLoadGame() {
+//
+//    }
 
     @FXML
     Button newGameBtn;
